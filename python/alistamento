@@ -1,0 +1,47 @@
+from datetime import date
+print('=*'*30)
+print('SEJA BEM VINDO AO ALISTAMENTO MILITAR')
+print('*='*30)
+print('''Qual seu sexo:
+[1] MASCULINO
+[2] FEMININO''')
+atual = date.today().year
+escolha = input('sua escolha: ')
+if escolha == '1':
+    nascimento = int(input('digite a ano do seu nascimento: '))
+    idade = atual - nascimento
+    print(f'Quem nasceu em {nascimento} tem {idade} anos')
+    if idade == 18:
+        print('você está APTO para o alistamento IMEDIATO')
+    elif idade > 18:
+        saldo = idade - 18
+        ano = atual - saldo
+        print(f'Seu tempo de alistamento já passou {saldo} anos')
+        print(f'Você deveria ter se alistado em {ano}')
+    elif idade < 18:
+        saldo = 18 - idade
+        ano = atual + saldo
+        print(f'Você ainda não está na idade de se alistar, você tem {saldo} anos')
+        print(f'Irá se alistar em {ano}')
+else:
+    print('O ALISTAMENTO MILITAR NÃO É OBRIGATORIO PARA MULHERES')
+    print('''Deseja se alistar:
+    [1] SIM
+    [2] NÃO''')
+    opcao = input('sua escolha: ')
+    if opcao == '1':
+        nascimento = int(input('digite o ano do seu nascimento: '))
+        idade = atual - nascimento
+        print(f'Quem nasceu em {nascimento} tem {idade} anos')
+        if idade == 18:
+            print('Você está APTA para o alistameto IMEDIATO!')
+        elif idade > 18:
+            saldo = idade - 18
+            ano = atual - saldo
+            print(f'Seu tempo de alistamento já passou {saldo} anos')
+            print(f'Você deveria  ter se alistado em {ano}')
+        elif idade < 18:
+            saldo = 18 - idade
+            ano = atual + saldo
+            print(f'Você ainda não está na idade de se alistar,ainda faltam {saldo} anos')
+            print(f'Irá se alistar em {ano}')
