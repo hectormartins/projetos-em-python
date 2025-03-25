@@ -1,0 +1,9 @@
+media1 = float(input('Digite sua primeira nota: '))
+media2 = float(input('Digite sua segunda nota: '))
+total = (media1 + media2) / 2
+if total < 5.0:
+    print(f' sua primeira nota é {media1} e sua segunda nota é {media2}, sua media atual é {total}. VOCÊ ESTÁ REPROVADO!')
+elif total <= 7.0:
+    print(f' Sua primeira nota é {media1} e sua segunda nota é {media2}, sua media atual é {total}, VOCÊ ESTÁ DE RECUPERAÇÃO')
+elif total > 7:
+    print(f' Sua primeira nota é {media1} e sua segunda nota é {media2}, sua media atual é {total}. VOCÊ ESTÁ APROVADO!')
