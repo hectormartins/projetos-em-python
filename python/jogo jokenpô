@@ -1,0 +1,39 @@
+from random import randint
+item = ('pedra', 'papel', 'tesoura')
+computador = randint(0,2)
+print('''Suas Opções:
+[ 0 ] PEDRA
+[ 1 ] PAPEL
+[ 2 ] TESOURA''')
+jogador = int(input('digite seu jogada: '))
+print('-=' * 10)
+print(f'pc jogou {item[computador]}')
+print(f'player jogou {item[jogador]}')
+print('-=' * 10)
+if computador == 0:
+    if jogador == 0:
+        print('EMPATE! EMBOS JOGARAM PEDRA')
+    elif jogador == 1:
+        print('JOGADOR GANHOU! JOGADOR JOGOU PAPEL, PC JOGOU PEDRA')
+    elif jogador == 2:
+        print('PC GANHOU! PC JOGOU PEDRA, JOGADOR JOGOU TESOURA')
+    else:
+        print('jogada invalida!')
+elif computador == 1:
+    if jogador == 0:
+        print('PC GANHOU! O JOGADOR JOGOU PEDRA, PC JOGOU PAPEL')
+    elif jogador == 1:
+        print('EMPATE! AMBOS JOGARAM PAPEL')
+    elif jogador == 2:
+        print('JOGADOR GANHOU! O JOGADOR JOGOU TESOURA E PC JOGOU PAPEL')
+    else:
+        print('jogada invalida!')
+elif computador  == 2:
+    if jogador == 0:
+        print('JOGADOR VENCEU! O JOGADOR JOGOU PEDRA, O PC JOGOU TESOURA')
+    elif jogador == 1:
+        print('PC VENCEU! O JOGADOR JOGOU PAPEL, O PC JOGOU TESOURA')
+    elif jogador == 2:
+        print('EMPATE! AMBOS JOGARAM TESOURA!')
+    else:
+        print('jogada invalida!')
